@@ -1,5 +1,8 @@
 package org.example.inventario.Domain;
 
+import io.swagger.v3.oas.annotations.Hidden;
+
+@Hidden
 public class BaseResponseModel {
 
     private int statusCode;
