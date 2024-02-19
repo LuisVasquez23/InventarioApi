@@ -1,4 +1,4 @@
-package org.example.inventario.Application.Services;
+package org.example.inventario.Application.Factory;
 
 import org.example.inventario.Domain.BaseResponseModel;
 
