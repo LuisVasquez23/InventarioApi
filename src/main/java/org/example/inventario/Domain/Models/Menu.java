@@ -3,8 +3,6 @@ package org.example.inventario.Domain.Models;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.Date;
-
 @Data
 @Entity
 public class Menu extends BaseModel{
