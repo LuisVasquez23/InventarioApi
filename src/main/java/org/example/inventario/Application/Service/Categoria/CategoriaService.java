@@ -4,11 +4,12 @@ import org.example.inventario.Application.Factory.Categoria.CategoriaRepository;
 import org.example.inventario.Domain.Models.Categoria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Component
+@Service
 
 public class CategoriaService {
     @Autowired

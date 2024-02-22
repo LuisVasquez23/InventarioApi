@@ -5,12 +5,13 @@ import org.example.inventario.Application.Factory.Estante.EstanteRepository;
 import org.example.inventario.Domain.Models.Estante;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 import java.util.Optional;
 
-@Component
+@Service
 public class EstanteService {
     @Autowired
     private EstanteRepository estanteRepository;
