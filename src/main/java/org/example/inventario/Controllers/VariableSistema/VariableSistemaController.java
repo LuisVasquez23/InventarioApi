@@ -39,4 +39,34 @@ public class VariableSistemaController {
         return ResponseApiService.response(500 , added , "Sede is already created");
     }
 
+    @PutMapping()
+    public BaseResponseModel Update(@RequestBody VariableSistema newVariable , Long id){
+
+        if(id == null){
+            return ResponseApiService.response(500 , newVariable , "Id is required");
+        }
+
+        VariableSistema variableUpdate = variableSistemaService.Update(newVariable, id);
+
+        if(variableUpdate != null){
+            return ResponseApiService.response(200 , newVariable , "Variable updated successfully");
+        }
+
+        return ResponseApiService.response(404, newVariable , "Variable is not found");
+    }
+
+    @DeleteMapping()
+    public BaseResponseModel Delete(Long id){
+        if(id == null){
+            return ResponseApiService.response(500 , null , "Id is required");
+        }
+
+        VariableSistema variableSistema = variableSistemaService.Delete(id);
+
+        if(variableSistema != null){
+            return ResponseApiService.response(200 , variableSistema , "Variable deleted successfully");
+        }
+
+        return ResponseApiService.response(404, null , "Variable is not found");
+    }
 }
