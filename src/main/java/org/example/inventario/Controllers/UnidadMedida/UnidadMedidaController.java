@@ -5,10 +5,7 @@ import org.example.inventario.Application.Service.UnidadMedida.UnidadMedidaServi
 import org.example.inventario.Domain.BaseResponseModel;
 import org.example.inventario.Domain.Models.UnidadMedidas;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,7 +24,7 @@ public class UnidadMedidaController {
     }
 
     @PostMapping()
-    public BaseResponseModel Create(UnidadMedidas newUnidad){
+    public BaseResponseModel Create(@RequestBody UnidadMedidas newUnidad){
         try{
             unidadMedidaService.Create(newUnidad);
             return  ResponseApiService.response(200, newUnidad, "Success" );
